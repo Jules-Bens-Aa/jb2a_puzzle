@@ -1,0 +1,51 @@
+{
+  "name": "jb2a_puzzle",
+  "title": "JB2A - Music Puzzle",
+  "description": "<p>This module adds a few compendiums to use in conjunction with the Trigger Happy module</p>",
+  "author": "Gazkhan#8192 and Wassily#8035",
+  "url": "",
+  "version": "0.0.1",
+  "minimumCoreVersion": "0.7.0",
+  "compatibleCoreVersion": "0.7.9",
+  "packs": [
+    {
+      "entity": "Macro",
+      "label": "Puzzle - Individual Music Notation",
+      "name": "Puzzle - Individual Music Notation",
+      "path": "packs/puzzle-individual-music-notation.db",
+      "module": "jb2a_puzzle"
+    },
+    {
+      "entity": "Macro",
+      "label": "Puzzle - Utility",
+      "name": "Puzzle - Utility",
+      "path": "packs/puzzle-utility.db",
+      "module": "jb2a_puzzle"
+    },
+    {
+      "entity": "Actor",
+      "label": "Puzzle - Actors",
+      "name": "Puzzle - Actors",
+      "path": "packs/puzzle-actors.db",
+      "module": "jb2a_puzzle"
+    },
+    {
+      "entity": "JournalEntry",
+      "label": "Trigger Happy",
+      "name": "Trigger Happy",
+      "path": "packs/trigger-happy.db",
+      "module": "jb2a_puzzle"
+    }
+  ],
+  "media": [
+    {
+      "type": "cover",
+      "url": "media/jb2a_puzzle.jpg"
+    }
+  ],
+  "type": "module",
+  "license": "",
+  "manifest": "",
+  "download": ""
+}
+  
