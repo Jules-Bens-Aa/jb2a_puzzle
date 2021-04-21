@@ -3,7 +3,7 @@
   "title": "JB2A - Music Puzzle",
   "description": "<p>This module adds a few compendiums to use in conjunction with the Trigger Happy module</p>",
   "author": "Gazkhan#8192 and Wassily#8035",
-  "url": "",
+  "url": "https://github.com/Jules-Bens-Aa/jb2a_puzzle",
   "version": "0.0.1",
   "minimumCoreVersion": "0.7.0",
   "compatibleCoreVersion": "0.7.9",
@@ -45,7 +45,7 @@
   ],
   "type": "module",
   "license": "",
-  "manifest": "",
-  "download": ""
+  "manifest": "https://github.com/Jules-Bens-Aa/jb2a_puzzle/releases/latest/download/module.json",
+  "download": "https://github.com/Jules-Bens-Aa/jb2a_puzzle/releases/download/0.0.1/jb2a_puzzle-0.0.1.zip"
 }
   
