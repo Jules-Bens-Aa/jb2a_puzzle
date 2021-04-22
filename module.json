@@ -1,28 +1,21 @@
 {
   "name": "jb2a_puzzle",
   "title": "JB2A - Music Puzzle",
-  "description": "<p>This module adds a few compendiums to use in conjunction with the Trigger Happy module</p>",
+  "description": "<p>This module adds a few compendiums to use in conjunction with the Trigger Happy module, The Furnace, FXMaster and the JB2A Patreon Pack of Animated Assets</p>",
   "author": "Gazkhan#8192 and Wassily#8035",
   "url": "https://github.com/Jules-Bens-Aa/jb2a_puzzle",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "minimumCoreVersion": "0.7.0",
   "compatibleCoreVersion": "0.7.9",
   "packs": [
     {
       "entity": "Macro",
-      "label": "Puzzle - Individual Music Notation",
-      "name": "Puzzle - Individual Music Notation",
+      "label": "Puzzle - Macro",
+      "name": "Puzzle - Macro",
       "path": "packs/puzzle-individual-music-notation.db",
       "module": "jb2a_puzzle"
     },
-    {
-      "entity": "Macro",
-      "label": "Puzzle - Utility",
-      "name": "Puzzle - Utility",
-      "path": "packs/puzzle-utility.db",
-      "module": "jb2a_puzzle"
-    },
-    {
+        {
       "entity": "Actor",
       "label": "Puzzle - Actors",
       "name": "Puzzle - Actors",
@@ -46,5 +39,5 @@
   "type": "module",
   "license": "",
   "manifest": "https://github.com/Jules-Bens-Aa/jb2a_puzzle/releases/latest/download/module.json",
-  "download": "https://github.com/Jules-Bens-Aa/jb2a_puzzle/releases/download/0.0.1/jb2a_puzzle-0.0.1.zip"
+  "download": "https://github.com/Jules-Bens-Aa/jb2a_puzzle/releases/download/0.0.2/jb2a_puzzle-0.0.2.zip"
 }
