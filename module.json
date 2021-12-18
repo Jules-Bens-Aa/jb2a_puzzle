@@ -1,32 +1,18 @@
 {
   "name": "jb2a_puzzle",
   "title": "JB2A - Music Puzzle",
-  "description": "<p>This module adds a few compendiums to use in conjunction with the Trigger Happy module, Advanced-Macros, FXMaster and the JB2A Patreon Pack of Animated Assets</p>",
+  "description": "<p>This module adds a compendium to use in conjunction with Monk's Active Tiles, Sequencer, Tagger, and the JB2A Patreon Pack of Animated Assets modules.</p>",
   "author": "Gazkhan#8192 and Wassily#8035",
   "url": "https://github.com/Jules-Bens-Aa/jb2a_puzzle",
   "version": "0.0.7",
   "minimumCoreVersion": "0.8.6",
-  "compatibleCoreVersion": "0.8.8",
+  "compatibleCoreVersion": "0.8.9",
   "packs": [
     {
       "entity": "Macro",
       "label": "JB2A - Puzzle - Macros",
       "name": "jb2a-puzzle-macros",
       "path": "packs/jb2a-puzzle-macros.db",
-      "module": "jb2a_puzzle"
-    },
-        {
-      "entity": "Actor",
-      "label": "JB2A - Puzzle - Actors",
-      "name": "jb2a-puzzle-actors",
-      "path": "packs/jb2a-puzzle-actors.db",
-      "module": "jb2a_puzzle"
-    },
-    {
-      "entity": "JournalEntry",
-      "label": "Trigger Happy",
-      "name": "trigger-happy",
-      "path": "packs/trigger-happy.db",
       "module": "jb2a_puzzle"
     }
   ],
