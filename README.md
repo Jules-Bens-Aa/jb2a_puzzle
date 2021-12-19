@@ -31,3 +31,6 @@ The pressure plate is best accompanied with some secret doors that you want to b
 ## Cleanup
 
 Are you done with the session where the puzzle was located, or don't want all of the macros in your macro directory anymore? Well, cleanup is as simple as using the JB2A - Puzzle Cleanup macro! This macro will delete all of the imported and auto-generated macros, tiles, journals, and folders from your world.
+
+## Credits
+Thanks to @Ethck for the massive help at refactoring the module !
