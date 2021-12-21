@@ -1,5 +1,11 @@
 const music_folder = "modules/jb2a_patreon/Library/Generic/Music_Notation";
-const folder = await FilePicker.browse("data", music_folder);
+let datasource;
+if (typeof ForgeVTT !== "undefined" && ForgeVTT.usingTheForge) {
+    datasource = "forge-bazaar";
+} else {
+    datasource = "data";
+}
+const folder = await FilePicker.browse(datasource, music_folder);
 const files = folder.files;
 const animations = files.filter((file) => file.endsWith(".webm"));
 const tiles = files.filter((file) => file.endsWith(".webp"));
