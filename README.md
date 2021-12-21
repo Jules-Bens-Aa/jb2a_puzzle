@@ -34,3 +34,6 @@ Are you done with the session where the puzzle was located, or don't want all of
 
 ## Credits
 Thanks to @Ethck for the massive help at refactoring the module !
+
+## Update
+Now works in the Forge when the JB2A Patreon module is installed through the bazaar ! Again thanks to @Ethck ! :)
