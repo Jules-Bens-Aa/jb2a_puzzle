@@ -4,9 +4,9 @@
   "description": "<p>This module adds a compendium to use in conjunction with Monk's Active Tiles, Sequencer, Tagger, and the JB2A Patreon Pack of Animated Assets modules.</p>",
   "author": "Gazkhan#8192, Wassily#8035, and Ethck#6879",
   "url": "https://github.com/Jules-Bens-Aa/jb2a_puzzle",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "minimumCoreVersion": "0.8.6",
-  "compatibleCoreVersion": "0.8.9",
+  "compatibleCoreVersion": "9",
   "packs": [
     {
       "entity": "Macro",
@@ -22,8 +22,25 @@
       "url": "media/jb2a_puzzle.jpg"
     }
   ],
+  "dependencies": [
+    {
+        "name": "sequencer",
+        "manifest": "https://github.com/fantasycalendar/FoundryVTT-Sequencer/releases/latest/download/module.json"
+    },
+    {
+        "name": "tagger",
+        "manifest": "https://github.com/fantasycalendar/FoundryVTT-Tagger/releases/latest/download/module.json"
+    },
+    {
+      "name": "monks-active-tiles",
+      "manifest": "https://github.com/ironmonk88/monks-active-tiles/releases/latest/download/module.json"
+    },
+    {
+      "name": "jb2a_patreon"
+    }
+],
   "type": "module",
   "license": "",
   "manifest": "https://github.com/Jules-Bens-Aa/jb2a_puzzle/releases/latest/download/module.json",
-  "download": "https://github.com/Jules-Bens-Aa/jb2a_puzzle/releases/download/0.1.0/jb2a_puzzle-0.1.0.zip"
+  "download": "https://github.com/Jules-Bens-Aa/jb2a_puzzle/releases/download/0.1.1/jb2a_puzzle-0.1.1.zip"
 }
