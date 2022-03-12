@@ -14,7 +14,7 @@ if(!hasTileFlag && !hasMacroFlag && !hasJournalFlag){
     await setupInit()
 }
 else{
-    const warning = "Warning : You have already executed this macro ! Use the Cleanup macro first if you want to start again";
+    const warning = "JB2A_Puzzle Warning : You have already executed this macro ! Use the Cleanup macro first if you want to start again";
     ui.notifications.warn(warning);
 }
 
