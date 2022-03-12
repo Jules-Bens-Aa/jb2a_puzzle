@@ -6,6 +6,16 @@ This module provides a compendium with several macros for use in creating a musi
 
 ![sample passwords](media/puzzleSampleCodes.png)
 
+## Install
+- Copy this manifest link : 
+https://github.com/Jules-Bens-Aa/jb2a_puzzle/releases/latest/download/module.json
+- Go to your FoundryVTT's "Add-on Modules" tab
+- Click on "Install Module"
+- Wait for the list of modules to appear
+- Paste the manifest link in the relevant field and click install.
+- Don't close this tab just yet ! You might need to install a couple of other modules listed in the next step.
+
+
 ## Setup
 
 To setup the puzzle you simply need to enable the following modules and use our setup macro.
