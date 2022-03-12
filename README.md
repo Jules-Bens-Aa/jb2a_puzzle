@@ -16,7 +16,7 @@ To setup the puzzle you simply need to enable the following modules and use our 
 -   The JB2A Patreon module (technically only needs to be installed)
 
 You can find our setup macro in the compendium JB2A - Puzzle - Macros. Be sure to import all three macros into the world!
-When you execute the setup you should see a whole slew of tiles appear in the upper left hand corner of your screen like this:
+When you execute the setup you should see a whole slew of tiles appear in the center of your scene in a pre-defined, arbitrary pattern like this:
 
 ![sample setup screen](media/puzzleSetup.png)
 
