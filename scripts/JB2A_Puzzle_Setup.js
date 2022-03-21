@@ -1,5 +1,5 @@
 // check tiles
-const hasTileFlag = !!canvas.scene.tiles.find(tile => tile?.data?.flags?.tagger?.tags?.find(tag => tag === "jb2a_puzzle"));
+const hasTileFlag = !!Tagger.getByTag("jb2a_puzzle").length;
 //console.log(hasTileFlag);
 
 // check macros
