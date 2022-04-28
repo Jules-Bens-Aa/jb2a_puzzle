@@ -46,4 +46,6 @@ Are you done with the session where the puzzle was located, or don't want all of
 Thanks to @Ethck for the massive help at refactoring the module !
 
 ## Update
-Now works in the Forge when the JB2A Patreon module is installed through the bazaar ! Again thanks to @Ethck ! :)
+Thanks to @Appak and for letting us know we forgot to add a check for Forge in the 'Pressure Plate' macro. 
+Now **actually** works in the Forge when the JB2A Patreon module is installed through the bazaar ! Again, thanks @Ethck for this amazing reworks !
+Also thanks to @Wasp for the oneliner, much better ;)

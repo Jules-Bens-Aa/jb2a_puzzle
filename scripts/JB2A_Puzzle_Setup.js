@@ -20,13 +20,7 @@ else{
 
 async function setupInit(){
     const music_folder = "modules/jb2a_patreon/Library/Generic/Music_Notation";
-    let datasource;
-    if (typeof ForgeVTT !== "undefined" && ForgeVTT.usingTheForge) {
-        datasource = "forge-bazaar";
-    } else {
-        datasource = "data";
-    }
-    const folder = await FilePicker.browse(datasource, music_folder);
+    const folder = await FilePicker.browse(typeof ForgeVTT !== "undefined" && ForgeVTT.usingTheForge ? "forge-bazaar" : 'data', music_folder);
     const files = folder.files;
     const animations = files.filter((file) => file.endsWith(".webm"));
     const tiles = files.filter((file) => file.endsWith(".webp"));
