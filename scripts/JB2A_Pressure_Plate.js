@@ -27,7 +27,7 @@ pagePlayer = journalPlayer.pages.getName("PlayerEntry");
 const wait = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
 
 // only execute if the pagePlayer has the same note-code as the solution
-if (pageGM.content === pagePlayer.content) {
+if (pageGM.text.content === pagePlayer.text.content) {
     // Open the doors
     // IMPORTANT: You must assign the doors the tag below for them to be toggled. By default it's `jb2a-door`
     const doors = Tagger.getByTag("jb2a-door");
