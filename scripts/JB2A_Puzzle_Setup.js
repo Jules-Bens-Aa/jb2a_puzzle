@@ -3,29 +3,32 @@ const hasTileFlag = !!Tagger.getByTag("jb2a_puzzle").length;
 //console.log(hasTileFlag);
 
 // check macros
-const hasMacroFlag = !!Array.from(game.macros).find(m => m?.data?.flags?.jb2a_puzzle?.delete === true);
+const hasMacroFlag = !!Array.from(game.macros).find((m) => m?.flags?.jb2a_puzzle?.delete === true);
 //console.log(hasMacroFlag);
 
 //check journal entries
-const hasJournalFlag = !!Array.from(game.journal).find(j => j?.data?.flags?.jb2a_puzzle?.delete === true);
+const hasJournalFlag = !!Array.from(game.journal).find((j) => j?.data?.jb2a_puzzle?.delete === true);
 //console.log(hasJournalFlag);
 
-if(!hasTileFlag && !hasMacroFlag && !hasJournalFlag){
-    await setupInit()
-}
-else{
-    const warning = "JB2A_Puzzle Warning : You have already executed this macro ! Use the Cleanup macro first if you want to start again";
+if (!hasTileFlag && !hasMacroFlag && !hasJournalFlag) {
+    await setupInit();
+} else {
+    const warning =
+        "JB2A_Puzzle Warning : You have already executed this macro ! Use the Cleanup macro first if you want to start again";
     ui.notifications.warn(warning);
 }
 
-async function setupInit(){
+async function setupInit() {
     const music_folder = "modules/jb2a_patreon/Library/Generic/Music_Notation";
-    const folder = await FilePicker.browse(typeof ForgeVTT !== "undefined" && ForgeVTT.usingTheForge ? "forge-bazaar" : 'data', music_folder);
+    const folder = await FilePicker.browse(
+        typeof ForgeVTT !== "undefined" && ForgeVTT.usingTheForge ? "forge-bazaar" : "data",
+        music_folder
+    );
     const files = folder.files;
     const animations = files.filter((file) => file.endsWith(".webm"));
     const tiles = files.filter((file) => file.endsWith(".webp"));
-    const canvasCenterWidth = canvas.dimensions.width/2;
-    const canvasCenterHeight = canvas.dimensions.height/2;
+    const canvasCenterWidth = canvas.dimensions.width / 2;
+    const canvasCenterHeight = canvas.dimensions.height / 2;
 
     const playerJournalName = "PlayerEntry";
     const gmJournalName = "GM Solution";
@@ -85,7 +88,6 @@ async function setupInit(){
         [-300, -600],
     ];
 
-
     let tileData = [];
     let macroData = [];
     // assemble the tiles and macros with as much info as possible
@@ -94,7 +96,9 @@ async function setupInit(){
         // tile is the filename for the webp
         // i is the index
         const tData = {
-            img: tile,
+            texture: {
+                src: tile,
+            },
             height: 100,
             width: 100,
             x: canvasCenterWidth + positionArray[i][0],
@@ -117,31 +121,31 @@ async function setupInit(){
         // this macro will find the note and play its respective animation at the tile location
         // it will also update the playerJournal with the new note
         const mData = {
-        name: getNoteName(tile),
-        img: tile,
-        type: "script",
-        scope: "global",
-        command: `
-                const tile = Tagger.getByTag("${name}")[0];
-                const scale = ((tile.data.width + tile.data.height)/2)/ 100;
+            name: getNoteName(tile),
+            img: tile,
+            type: "script",
+            scope: "global",
+            command: `
+                const tTile = Tagger.getByTag("${name}")[0];
+                const scale = ((tTile.width + tTile.height)/2)/ 100;
                 new Sequence()
                     .effect()
-                        .atLocation(tile)
+                        .atLocation(tTile, {offset: {x: 0, y: scale * -100}})
                         .file("${animation}")
                         .scale(scale)
-                        .offset({y: scale * 100})
                     .play()
                     
 
                 //Class="secret means that this text/image will be only visible to the GM"
                 const content = "<img src = ${tile} width = 100 /> ";
                 const journal = game.journal.getName("${playerJournalName}");
+                const jPage = journal.pages.getName("${playerJournalName}");
                 //Here, we add text to the Journal Entry
                 //journal.data.content is what's already in the Journal Entry and we add what we defined just above as "content"
-                journal.update({content: journal.data.content + content});
+                jPage.update({"text.content": jPage.text.content + content});
         `,
-        author: game.user.id,
-        "flags.jb2a_puzzle.delete": true,
+            author: game.user.id,
+            "flags.jb2a_puzzle.delete": true,
         };
 
         macroData.push(mData);
@@ -153,7 +157,9 @@ async function setupInit(){
         ...tileData,
         // This is a specially crafted pressure plate tile
         {
-            img: "icons/environment/traps/pressure-plate.webp",
+            texture: {
+                src: "icons/environment/traps/pressure-plate.webp",
+            },
             height: 100,
             width: 100,
             x: canvasCenterWidth,
@@ -170,6 +176,10 @@ async function setupInit(){
                             // be sure to change it here too
                             macroid: game.macros.getName("JB2A - Pressure Plate").id,
                             runasgm: "gm",
+                            entity: {
+                                id: "Macro." + game.macros.getName("JB2A - Pressure Plate").id,
+                                name: "JB2A - Pressure Plate",
+                            },
                         },
                     },
                 ],
@@ -191,10 +201,10 @@ async function setupInit(){
 
     const tileMacroData = tiles.map((tile, i) => {
         // this is the actual tile document's id
-        const cTile = canvas.scene.tiles.find((t) => t.data.img === tile).id;
+        const cTile = canvas.scene.tiles.find((t) => t.texture.src === tile);
         // assemble our needed changes
         const changes = {
-            _id: cTile,
+            _id: cTile.id,
             "flags.monks-active-tiles.actions": [
                 {
                     action: "runmacro",
@@ -203,6 +213,10 @@ async function setupInit(){
                     data: {
                         macroid: game.macros.getName(getNoteName(tile)).id,
                         runasgm: "gm",
+                        entity: {
+                            id: "Macro." + game.macros.getName(getNoteName(tile)).id,
+                            name: tile,
+                        },
                     },
                 },
             ],
