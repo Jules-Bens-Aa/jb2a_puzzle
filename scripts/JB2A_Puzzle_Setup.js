@@ -7,7 +7,7 @@ const hasMacroFlag = !!Array.from(game.macros).find((m) => m?.flags?.jb2a_puzzle
 //console.log(hasMacroFlag);
 
 //check journal entries
-const hasJournalFlag = !!Array.from(game.journal).find((j) => j?.data?.jb2a_puzzle?.delete === true);
+const hasJournalFlag = !!Array.from(game.journal).find((j) => j?.flags?.jb2a_puzzle?.delete === true);
 //console.log(hasJournalFlag);
 
 if (!hasTileFlag && !hasMacroFlag && !hasJournalFlag) {

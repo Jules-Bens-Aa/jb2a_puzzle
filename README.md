@@ -3,6 +3,8 @@
 ## Overview
 
 This module provides a compendium with several macros for use in creating a musical note password puzzle. In order to advance the players must match the code exactly to unlock some form of secret door.
+**This version of the module will only work for the V10 version of FoundryVTT.**
+For V9, see this page: [music_puzzle info on website](https://jb2a.com/home/content-information/#music_puzzle)
 
 ![sample passwords](media/puzzleSampleCodes.png)
 
@@ -31,6 +33,9 @@ When you execute the setup you should see a whole slew of tiles appear in the ce
 ![sample setup screen](media/puzzleSetup.png)
 
 The musical notes are already setup with Monk's Active Tiles triggers and will play the associated animated effect when an actor steps on it. The pressure plate will automatically execute the pressure plate macro that you imported from the compendium.
+
+Note: If the content of the "GM Solution" and the "PlayerEntry" journals are identical (which is the case when you forst execute the "Puzzle Setup" macro), the doors will open when the players will step on the "Pressure Plate" tile, which is likely not what you want to happen straight away. 
+Executing the "Pressure Plate" macro or stepping on the tile preemptively with a token, before the session, will fill the "GM solution" journal with a pattern which will ensure the doors won't open the first time the players will step on the tile.
 
 ### Setting Up Doors
 

@@ -1,12 +1,12 @@
 // for macros, journals, and folders filter by our cleanup flag
 const macros = game.macros
-    .filter((macro) => macro.data.flags.jb2a_puzzle?.delete === true)
+    .filter((macro) => macro.flags.jb2a_puzzle?.delete === true)
     .map((document) => document.id);
 const journals = game.journal
-    .filter((journal) => journal.data.flags.jb2a_puzzle?.delete === true)
+    .filter((journal) => journal.flags.jb2a_puzzle?.delete === true)
     .map((document) => document.id);
 const folders = game.folders
-    .filter((folder) => folder.data.flags.jb2a_puzzle?.delete === true)
+    .filter((folder) => folder.flags.jb2a_puzzle?.delete === true)
     .map((document) => document.id);
 // for tiles we can just use tagger to filter
 const tiles = Tagger.getByTag("jb2a_puzzle").map((document) => document.id);
