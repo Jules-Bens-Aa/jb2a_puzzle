@@ -118,7 +118,7 @@ async function setupInit() {
     //     [300, -600],
     //     [-300, -600],
     // ];
-    const musicNotesPathPrefix = "modules/jb2a-cipher/assets/Music/SoundNotes/"
+    const musicNotesPathPrefix = "modules/jb2a_puzzle/assets/Music/SoundNotes/"
     let notes = {};
     notes["A"]= [
         `${musicNotesPathPrefix}A2.ogg`,

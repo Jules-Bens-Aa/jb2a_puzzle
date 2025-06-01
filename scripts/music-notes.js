@@ -1,6 +1,6 @@
 const notes = {};
 export async function buildNotes(
-    musicNotesPathPrefix = "modules/jb2a-cipher/assets/Music/SoundNotes/"
+    musicNotesPathPrefix = "modules/jb2a_puzzle/assets/Music/SoundNotes/"
 
 ) {
         notes["A"]= [
