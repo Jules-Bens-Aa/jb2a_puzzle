@@ -2,10 +2,9 @@
 
 ## Overview
 
-This module provides a compendium with several macros for use in creating a musical note password puzzle. In order to advance the players must match the code exactly to unlock some form of secret door.
-![sample passwords](media/puzzleSampleCodes.png)
+This module can help you setup a musical note password puzzle on your scene. In order to advance the players must match the code exactly to unlock some form of secret door. Also, quite a lot of configuration possible.
 
-**This version of the module will work for the V10, V11 and V12 versions of Foundry VTT.**
+**This new version of the module will work for the V12 (and above) versions of Foundry VTT.**
 
 [Install and Setup Guide](https://jules-bens-aa.github.io/jb2a-wiki/other-projects/music-puzzle/)
 
